@@ -17,8 +17,7 @@ func main() {
 	mux.HandleFunc("POST /snippet/create", snippetCreatePost)
 
 	// Server embeded static files
-	fs := http.FileServer(http.FS(staticFiles))
-	mux.Handle("/static/", http.StripPrefix("/static", fs))
+	mux.Handle("GET /static/", http.FileServer(http.FS(staticFiles)))
 
 	log.Print("starting server on :4000")
 

@@ -1,0 +1,268 @@
+/* 16-bit Retro Theme */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: none;
+}
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #0d1117;
+    min-height: 100vh;
+    image-rendering: pixelated;
+}
+
+/* Scanlines overlay */
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(0deg,
+            rgba(0, 0, 0, 0.1) 0px,
+            rgba(0, 0, 0, 0.1) 1px,
+            transparent 1px,
+            transparent 2px);
+    z-index: 9999;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+/* Header with Logo */
+.site-header {
+    margin-bottom: 1.5rem;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 120px;
+    height: 120px;
+    image-rendering: pixelated;
+}
+
+.site-title {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #7ee787;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 0 #1f6feb;
+    line-height: 1;
+}
+
+/* Navigation - centered */
+.nav-centered {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+nav {
+    margin-bottom: 2rem;
+}
+
+nav a {
+    display: inline-block;
+    color: #58a6ff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    border: 2px solid #58a6ff;
+    background: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.15s;
+    box-shadow: 3px 3px 0 #1f6feb;
+}
+
+nav a:hover {
+    background: #58a6ff;
+    color: #0d1117;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0 #1f6feb;
+    text-decoration: none;
+}
+
+/* Main content - centered */
+.main-content {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Typography */
+h2 {
+    font-size: 1.5rem;
+    color: #7ee787;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #c9d1d9;
+}
+
+a {
+    color: #58a6ff;
+    text-decoration: none;
+    border-bottom: 1px dashed #58a6ff;
+}
+
+a:hover {
+    color: #7ee787;
+    border-bottom-style: solid;
+}
+
+/* Cards */
+.card {
+    background: #161b22;
+    border: 2px solid #30363d;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    box-shadow: 4px 4px 0 #0d1117;
+}
+
+/* Forms */
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+    background: #0d1117;
+    border: 2px solid #30363d;
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+    box-shadow: inset 2px 2px 0 #161b22;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #58a6ff;
+    box-shadow: inset 2px 2px 0 #161b22, 0 0 0 2px rgba(88, 166, 255, 0.3);
+}
+
+/* Buttons - retro style */
+button {
+    background: #238636;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #0d1117;
+    transition: all 0.15s;
+}
+
+button:hover {
+    background: #2ea043;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #0d1117;
+}
+
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+}
+
+button.secondary {
+    background: #30363d;
+    color: #c9d1d9;
+}
+
+button.secondary:hover {
+    background: #484f58;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #8b949e;
+}
+
+.mt-1 {
+    margin-top: 0.5rem;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+.mb-1 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-2 {
+    margin-bottom: 1rem;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.site-footer {
+    margin-top: auto;
+    padding-top: 2rem;
+    text-align: center;
+    color: #8b949e;
+    font-size: 0.875rem;
+}
+
+.site-footer a {
+    color: #58a6ff;
+}

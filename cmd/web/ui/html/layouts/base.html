@@ -4,19 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{template "title" .}}Snippetbox</title>
+    <title>{{template "title" .}} | Snippetbox</title>
     <link rel="stylesheet" href="/static/css/main.css">
-    <script src="/static/js/app.js"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="/">Snippetbox</a></h1>
-    </header>
-    {{template "nav" .}}
-    <main>
-        {{template "main" .}}
-    </main>
-    <footer>Powered by <a href="https://golang.org">GO</a></footer>
+    <div class="scanlines"></div>
+    <div class="page-wrapper">
+        <header class="site-header">
+            <a href="/" class="logo-title">
+                <img src="/static/image/logo.svg" alt="Snippetbox" class="logo-img">
+                <span class="site-title">Snippetbox</span>
+            </a>
+        </header>
+        {{template "nav" .}}
+        <main class="main-content">
+            {{template "main" .}}
+        </main>
+        <footer class="site-footer">
+            <p>Powered by <a href="https://golang.org">GO</a></p>
+        </footer>
+    </div>
+    <script src="/static/js/app.js" type="text/javascript"></script>
 </body>
 </html>
 {{end}}

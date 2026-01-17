@@ -5,10 +5,10 @@ import (
 	"html/template"
 )
 
-//go:embed ui/html/**/*.html
+//go:embed ui/html
 var htmlFiles embed.FS
 
-//go:embed ui/static/*
+//go:embed static
 var staticFiles embed.FS
 
 var ts *template.Template
