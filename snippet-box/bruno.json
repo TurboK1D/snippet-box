@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "snippet-box",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
